@@ -1,0 +1,56 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+    </head>
+    <body> 
+        <form>
+            <h1>Cadastro de usuário</h1>
+            <label for="nome">Nome</label>
+            <input type="text" name="name" id="nome" placeholder="digite seu nome">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="digite seu email">
+            <label for="senha">Senha</label>
+            <input type="password" name="password" id="senha" placeholder="digite sua senha">
+            <button type="submit">Cadastrar</button>
+        </form>
+        <form>
+            <h1>Cadastro de tarefa</h1>
+            <label for="titulo">Título</label>
+            <input type="text" name="title" id="titulo" placeholder="digite o título da tarefa">
+            <label for="descricao">Descrição</label>
+            <textarea name="description" id="descricao" placeholder="digite a descrição da tarefa"></textarea>
+            <label for="prioridade">Prioridade</label>
+            <input type="text" name="priority" id="prioridade" placeholder="digite a prioridade da tarefa">
+            <button type="submit">Cadastrar tarefa</button>
+        </form>
+        <form>
+            <h1>Reserva de escola</h1>
+            <label for="nome">Nome</label>
+            <input type="text" name="name" id="nome" placeholder="digite seu nome">
+            <label for="turma">Turma</label>
+            <input type="text" name="class" id="turma" placeholder="digite o nome da turma">
+            <label for="horario">Horário</label>
+            <input type="datetime-local" name="schedule" id="horario" placeholder="digite o horário da reserva">
+            <button type="submit">Agendar reserva</button>
+        </form>
+        <form>
+            <h1>Login</h1>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="digite seu email">
+            <label for="senha">Senha</label>
+            <input type="password" name="password" id="senha" placeholder="digite sua senha">
+            <button type="submit">Login</button>
+        </form>
+        <form>
+            <h1>Contato com a coordenação</h1>
+            <label for="assunto">Assunto</label>
+            <input type="text" name="subject" id="assunto" placeholder="digite o assunto">
+            <label for="mensagem">Mensagem</label>
+            <textarea name="message" id="mensagem" placeholder="digite sua mensagem"></textarea>
+            <button type="submit">Enviar mensagem</button>
+        </form>
+    </body>
+</html>
