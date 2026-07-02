@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <title>Login</title>
+    </head>
+    <style>
+    body {
+        background-color:#78CDD7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .caxa {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 50vw;
+        height: 50vh;
+        background-color: #0D5C63;
+        padding: 2%;
+        border-radius: 20px;
+        box-shadow: 2px 4px 3px #333333;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        gap: 3%;
+    }
+
+    .titulo {
+        font-family: 'Times New Roman', serif;
+        font: bolder;
+        height: 100px;
+        width: 400px;
+        color: #FFFFFA;
+        -webkit-text-stroke: 0.5px black;
+        font-size: 50px;
+    }
+
+    .titulo-labels {
+        font-family: 'Times New Roman', serif;
+        font: bolder;
+        color: #FFFFFA;
+        -webkit-text-stroke: 0.5px black;
+        font-size: 30px;
+    }
+
+    .input {
+        width: 40%;
+        height: 80%;
+        font-size: 20px;
+    }
+
+    .btao {
+        border-width: 2px;
+        border-radius: 14px;
+        border-color: #333333;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        height: 20%;
+        font-size: 30px;
+        background-color: #78CDD7;
+        transition-duration: 0.8s;
+    }
+
+    .btao:hover {
+        border-width: 2px;
+        border-radius: 14px;
+        border-color: #333333;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        height: 20%;
+        font-size: 32px;
+        font: bolder;
+        background-color: #3d858d;
+        transition-duration: 0.8s;
+    }
+
+    .otro-titulo {
+        font-weight: bolder;
+        font-family: sans-serif;
+        font-size: 100px;
+        color: rgb(216, 123, 17);
+    }
+
+    .otro-texto {
+        font-weight: lighter;
+        font-family: sans-serif;
+        font-size: 30px;
+        color: rgb(199, 20, 103);
+    }
+
+    </style>
+    <body> 
+        <div class="caxa">
+            <h1 class="titulo">CADASTRO DE ALUNO</h1>
+            <form class="formulario">
+            <div class="grupo-campo">
+                <label class="titulo-labels" for="titulo">Nome</label>
+             <input class="input" type="text" id="nome" name="nome" placeholder="Seu nome aqui.">
+            </div>
+            </br>
+            <div class="grupo-campo">
+                <label class="titulo-labels" for="Email">Email</label>
+                <input class="input" type="email" id="email" name="email" placeholder="Seu email aqui.">
+            </div>
+            </br>
+                <div class="grupo-campo">
+                    <label class="titulo-labels" for="Senha">Senha</label>
+                    <input class="input" type="password" id="senha" name="senha" placeholder="Sua senha aqui.">
+                </div>
+            </br>
+            <button class="btao" type="submit">Cadastre-se</button>
+        </form>
+       </div>
+       <h1 class="otro-titulo">Nossa Ambição, Entenda!</h1>
+       <p class="otro-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </body>
+</html>
