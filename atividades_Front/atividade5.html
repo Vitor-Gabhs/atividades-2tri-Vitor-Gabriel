@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
@@ -6,23 +6,97 @@
         <title>Apresentação do projeto</title>
     </head>
     <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        background-color: #BFD7EA;
+        gap: 20px;
+    }
     header {
-        background-color: #44A1A0;
+        background-color: #087E8B;
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-align: center;
         flex-direction: row;
+        padding: 20px;
+        border-radius: 20px;
     }
     h1 {
         color: #333333;
-
     }
+    .btao {
+        height: 50px; 
+        width: 50px;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        gap: 2vw;
+    }
+    .card {
+        display:flex;
+        width: 10vw;
+        height: 10vh;
+        background-color: #0B3954;
+        border-radius: 20px;
+        border-width: 2px;
+        border-color: #333333;
+    }
+    .two-areas {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        gap: 10vw;
+    }
+    .area {
+        display:flex;
+        width: 30vw;
+        height: 80vh;
+        background-color: #0B3954;
+        border-radius: 20px;
+        border-width: 2px;
+        border-color: #333333;
+        text-align: center;
+        align-items: center;
+        color: #FFFFFA;
+        flex-direction: column;
+        gap: 20vh;
+        padding: 1vh;
+    }
+    
+
     </style>
     <body> 
     <header>
         <h1>Apresentação do projeto</h1>
         <h3><a href="anexos_atv2/sobre.html">Sobre nós</a> | <a href="anexos_atv2/contato.html">Contato</a> | <a href="anexos_atv2/projeto.html">Projeto</a></h3>
+        <button class="btao">btão</button>
     </header>
+    <div class="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+    <div class="two-areas">
+        <div class="area">
+        <button class="btao">menu1</button>
+        <button class="btao">menu2</button>
+        <button class="btao">menu3</button>    
+        </div>
+        <div class="area"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sem ut ligula faucibus, non consectetur metus laoreet. Nullam iaculis mi a erat pulvinar, in auctor massa vestibulum. Nam elementum facilisis quam ut suscipit. Proin placerat diam in lobortis finibus. Pellentesque tempus tempus gravida. Proin sem massa, facilisis eu hendrerit a, feugiat ut nibh. Phasellus lacinia, diam eu tincidunt maximus, eros velit accumsan elit, id porta nisi massa nec sem. Sed sed vehicula urna. Nullam in arcu nec orci ultricies vulputate in id ex. Mauris eu purus quis augue eleifend blandit. Maecenas ut ex dignissim, venenatis justo non, vestibulum arcu. Ut sodales auctor sodales. Nam a nibh sit amet ex semper euismod non in risus. Cras aliquam ante vitae eleifend facilisis. Curabitur eros felis, dictum vitae bibendum vel, hendrerit quis sapien.
+            <br>
+            Etiam viverra, dolor nec vulputate ultrices, nulla velit sodales dolor, et dignissim turpis ante accumsan metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut dolor neque, viverra id mi id, hendrerit gravida eros. Duis at mollis risus. Proin vitae nunc tortor. Nam cursus lacus at urna fermentum fermentum. Nam porta elit nec nibh volutpat lacinia. Sed at hendrerit justo. Proin sollicitudin fermentum magna aliquet consequat.
+            <br>
+            Ut pharetra ante vitae sodales vehicula. Morbi tempus dapibus orci et imperdiet. Curabitur et molestie ante, at viverra libero. Pellentesque vestibulum lobortis nisi eu tempus. Proin vehicula interdum hendrerit. Morbi interdum tempor lectus. Suspendisse ex sem, consectetur eu orci ut, pellentesque ultricies turpis.
+            <br>
+            Vestibulum felis lectus, aliquet et elit vitae, bibendum posuere urna. Etiam egestas tempor mattis. Donec eleifend eu libero a pulvinar. Pellentesque augue mauris, ullamcorper sed ultrices a, euismod faucibus nisi. Vivamus imperdiet vulputate lobortis. Cras lectus sapien, auctor in bibendum ac, pellentesque nec tellus. Mauris tincidunt in metus at lacinia. Nam eu convallis nisl, ut ornare eros. Aenean porta non diam at lacinia. Maecenas eu tempus nunc.
+            <br>
+            Proin eget lobortis purus, ac fermentum velit. Sed vel convallis dolor. Etiam semper varius ipsum, malesuada accumsan lectus. Duis luctus finibus nulla sagittis scelerisque. Ut a ullamcorper nibh. Proin vitae semper tellus. Nam et urna et neque iaculis viverra. Quisque massa eros, mollis et iaculis at, consequat eu nulla.
+        </div>
     </body>
 </html>
