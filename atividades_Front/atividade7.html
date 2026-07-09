@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar</title>
+</head>
+<body>
+<div>
+    <h1>Adicione um nome:</h1>
+    <input type="text" id="nome" placeholder="digite o seu nome">
+    <button id="botao">Adicionar</button>
+
+    <div id="lista-nomes"></div>
+
+    <script>
+        const campoNome = document.querySelector('#nome')
+        const botao = document.querySelector('#botao')
+        const listaNomes = document.querySelector('#lista-nomes')
+
+         botao.addEventListener('click', () => {
+            const texto = campoNome.value.trim();
+
+            if (texto === '') {
+                alert('Digite um nome antes de adicionar');
+                return;
+            }
+
+            const item = document.createElement('p');
+            item.textContent = texto;
+            listaNomes.appendChild(item);
+
+
+            campoNome.value = '';
+            campoNome.focus();
+         })
+    </script>
+</div>
+</br>
+<div>
+    <h1>Adicione um aviso:</h1>
+
+    <input type="text" id="aviso" placeholder="digite o aviso">
+    <button id="botao2">Adicionar</button>
+
+    <ul id="lista-avisos"></ul>
+
+    <script>
+        const campoAviso = document.querySelector('#aviso')
+        const botao2 = document.querySelector('#botao2')
+        const listaAvisos = document.querySelector('#lista-avisos')
+
+         botao2.addEventListener('click', () => {
+            const texto = campoAviso.value.trim();
+
+            if (texto === '') {
+                alert('Digite um aviso antes de adicionar');
+                return;
+            }
+
+            const item2 = document.createElement('li');
+            item2.textContent = texto;
+            listaAvisos.appendChild(item2);
+
+
+            campoAviso.value = '';
+            campoAviso.focus();
+         })
+    </script>
+</div>
+</body>
+</html>
