@@ -10,17 +10,17 @@ const usuarios = [
     {id: 2, email: "profchatamaria@email.com", senha: '4321', perfil: 'professor'}
 ];
 
-const sessoes = [];
+let sessoes = [];
 
 app.post('/login', (req, res) => {
     const {email, senha} = req.body;
-    const usuario = usuarios.find(u => u.email === email && u.email === senha);
+    const usuario = usuarios.find(u => u.email === email && u.senha === senha);
 
 if (!usuario) {
     return res.status(401).json({ mensagem: 'E-mail ou senha incorretos.'});
 }
 
-const token = `token-${usuario.id}-${dateNow()}`;
+const token = `token-${usuario.id}-${Date.now()}`;
 sessoes.push({ token, usuarioId: usuario.id });
 
 res.json({ mensagem: 'login realizado!', token, perfil: usuario.perfil});
@@ -28,7 +28,7 @@ res.json({ mensagem: 'login realizado!', token, perfil: usuario.perfil});
 
 function autenticar(req, res, next) {
     const token = req.headers['authorization'];
-    const sessao = sessao.find(s => s.token === token);
+    const sessao = sessoes.find(s => s.token === token);
 
     if (!sessao) {
         return res.status(401).json({ mensagem: 'acesso negado.'});
