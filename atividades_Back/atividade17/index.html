@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar</title>
+</head>
+
+<body>
+    <h1>Cadastro de Usuários</h1>
+    <input type="text" id="nome" placeholder="Nome do usuário aqui.">
+    <button id="enviarUsuario">enviarUsuario</button>
+
+    <p id="resultadoUsuario"></p>
+
+    <script>
+        {
+            const nome = document.querySelector('#nome');
+            const enviarUsuario = document.querySelector('#enviarUsuario');
+            const resultadoUsuario = document.querySelector('#resultadoUsuario');
+
+            enviarUsuario.addEventListener('click', async () => {
+                const dados = {
+                    nome: nome.value
+                };
+
+                try {
+                    const resposta = await fetch('http://localhost:3000/usuarios', {
+                        method: 'POST',
+                        headers: {
+                            'Content-type': 'application/json'
+                        },
+                        body: JSON.stringify(dados)
+                    });
+
+                    const retorno = await resposta.json();
+                    resultadoUsuario.textContent = retorno.mensagem;
+                } catch (erro) {
+                    resultadoUsuario.textContent = 'Erro ao conectar com o servidor.'
+
+                }
+            })
+        }
+    </script>
+    <h1>Cadastro de Tarefas</h1>
+    <input type="text" id="tarefa" placeholder="Título da tarefa aqui.">
+    <button id="enviarTarefa">enviarTarefa</button>
+
+    <p id="resultadoTarefa"></p>
+
+    <script>
+        {
+            const tarefa = document.querySelector('#tarefa');
+            const enviarTarefa = document.querySelector('#enviarTarefa');
+            const resultadoTarefa = document.querySelector('#resultadoTarefa');
+
+            enviarTarefa.addEventListener('click', async () => {
+                const dados = {
+                    titulo: tarefa.value
+                };
+
+                try {
+                    const resposta = await fetch('http://localhost:3000/tarefas', {
+                        method: 'POST',
+                        headers: {
+                            'Content-type': 'application/json'
+                        },
+                        body: JSON.stringify(dados)
+                    });
+
+                    const retorno = await resposta.json();
+                    resultadoTarefa.textContent = retorno.mensagem;
+                } catch (erro) {
+                    resultadoTarefa.textContent = 'Erro ao conectar com o servidor.'
+
+                }
+            })
+        }
+    </script>
+    <h1>Veja a lista de Tarefas:</h1>
+
+    <button id="botao2">Ver</button>
+
+    <ul id="lista-Tarefas"></ul>
+
+    <script>
+    {
+        const botao2 = document.querySelector('#botao2')
+        const listaTarefas = document.querySelector('#lista-Tarefas')
+
+        botao2.addEventListener('click', async () => {
+        listaTarefas.innerHTML = '';
+
+            try {
+                const resposta = await fetch('http://localhost:3000/tarefas', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                });
+
+                const tarefas = await resposta.json();
+
+                tarefas.forEach(tarefa => {
+                    const li = document.createElement ('li');
+                    li.textContent = `ID: ${tarefa.id} - ${tarefa.titulo}`;
+                    listaTarefas.appendChild(li);
+                });
+             } catch (erro) {
+                const liErro = document.createElement('li');
+                liErro.textContent = 'Erro ao carregar as tarefas do servidor.';
+                listaTarefas.appendChild(liErro);
+            }
+        });
+    }
+    </script>
+
+</body>
+
+</html>
